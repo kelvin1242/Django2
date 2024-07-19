@@ -1,0 +1,39 @@
+<!-- obituaries/templates/obituaries/obituary_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Obituary</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'obituaries/css/styles.css' %}">
+</head>
+<body>
+    <h1>Submit Obituary</h1>
+    <form id="obituaryForm" action="{% url 'submit_obituary' %}" method="POST">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="date_of_birth" required>
+
+        <label for="date_of_death">Date of Death:</label>
+        <input type="date" id="date_of_death" name="date_of_death" required>
+
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="4" required></textarea>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+
+        <!-- You can include additional fields here if needed -->
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <form action="{% url 'view_obituaries' %}">
+        <button type="submit" class="view-obituaries-button">View Obituaries</button>
+    </form>
+</body>
+</html>

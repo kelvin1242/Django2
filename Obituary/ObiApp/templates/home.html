@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Obituary Platform</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2.5rem; /* Adjust font size as needed */
+        color: #333; /* Example text color */
+        text-transform: uppercase; /* Example text transformation */
+        letter-spacing: 2px; /* Example letter spacing */
+      }
+
+      .lead {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333
+      }
+      .btn {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Obituary Platform</h1>
+      <p class="lead">Explore our platform to submit and view obituaries.</p>
+      <a href="{% url 'submit_obituary' %}" class="btn btn-primary"
+        >Submit an Obituary</a
+      >
+      <a href="{% url 'view_obituaries' %}" class="btn btn-secondary"
+        >View Obituaries</a
+      >
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
